@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <title>Christmas Recipes</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            @font-face {
+                font-family: 'Christmas';
+                src: url(fonts/Christmas\ Comeback.ttf);
+                
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family:'Times New Roman', Times, serif;
+                background-color: #f4f4f4;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                width: 100%;
+                height: 100vh;
+            }
+
+            header {
+                background: rgb(6,116,89);
+                background: linear-gradient(90deg, rgba(6,116,89,1) 0%, rgba(46,168,9,1) 100%);
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+
+                font-size: 3rem;
+                font-stretch: expanded;
+
+                width: 100%;
+            }
+
+            .recetas {
+                display: flex;
+                flex-direction: row;
+
+            }
+
+            .recetas img {
+                width: 400px;
+                height: 400px;
+                margin: 50px 30px;
+
+
+                cursor: pointer;
+                border: #0C5F5F 5px solid;
+                border-radius: 15px;
+            }
+
+            .recetas .pudding, .cookies, .gingerbread {
+                transition: transform 0.5s;
+                
+            }
+
+            .recetas .pudding:hover,.cookies:hover,.gingerbread:hover {
+                transform: scale(1.1);
+            }
+
+            .recetas .pudding:active,.cookies:active,.gingerbread:active {
+                transform: scale(1);
+                transition: transform 0.1s;
+            }
+
+            .recetas a {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+            }
+
+            
+
+            .recetas h1 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #f4f4f4;
+                font-size: 4rem;
+                backdrop-filter: blur(5px);
+                width: 85%;
+
+                cursor: pointer;
+            }
+
+            .recetas .scaled{
+                transform: scale(1.1);
+            }
+
+            .intro, .receta_pudding {
+                display: flex;
+                flex-direction: column;
+                flex-direction: column;
+                
+                align-items: center;
+
+                width: 90%;
+
+                background-color: #f3f2eb;
+                border: #0C5F5F 5px solid;
+
+                border-radius: 15px;
+            }
+
+            .intro, .receta_pudding h1 {
+                font-size: 3rem;
+                text-align: center;
+                padding: 10px;
+                margin-top: 10px;
+                background: rgb(6,116,89);
+                background: linear-gradient(90deg, rgba(6,116,89,1) 0%, rgba(46,168,9,1) 100%);
+                color: #fff;
+
+                width: 70%;
+
+                border-radius: 15px;
+            }
+
+            .intro, .receta_pudding p {
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+
+            #ingredientes {
+                font-size: 1.9rem;
+                margin: 30px;
+
+                width: 40%;
+                background-color: red;   
+                
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Christmas Recipes</h1>
+        </header>
+
+        <div class="recetas">
+            <div class="pudding">
+                <a><h1>Pudding</h1><img src="img/pudding.webp" alt="Pudding"></a>
+            </div>
+
+            <div class="gingerbread">
+                <a><h1>Ginger house</h1><img src="img/gingerbreadhouse.webp" alt="Gingerbread House"></a>
+            </div>
+
+            <div class="cookies">
+                <a><h1>Cookies</h1><img src="img/christmascoockies.webp" alt="Cookies"></a>
+            </div>
+        </div>
+
+        <!--
+        <div class="intro">
+            <h1 id="nombre_receta">Christmas is coming !!!</h1>
+            <img>
+            <p>That's why I have created this little and simple website about three classic and delicious deserts that everyone can try to do. </p>
+            <p>Just click on the image of the dessert you want to know more about and enjoy the recipe.</p>
+            <p>Hope you like it and have a Merry Christmas !!!</p>
+        </div>
+        -->
+
+        <div class="receta_pudding">
+            <h1>Pudding</h1>
+            <p id="ingredientes">1. Ingrediente1
+            <br>2. Ingrediente2
+            <br>3. Ingrediente3
+            <br>4. Ingrediente4
+            <br>5. Ingrediente5
+            <br>6. Ingrediente6
+            <br>7. Ingrediente7
+            </p>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get all images
+                const images = document.querySelectorAll('.pudding, .cookies, .gingerbread');
+
+                images.forEach(image => {
+                    image.addEventListener('click', function() {
+                        // Remove the 'scaled' class from all images
+                        images.forEach(img => img.classList.remove('scaled'));
+                        
+                        // Add the 'scaled' class to the clicked image
+                        this.classList.add('scaled');
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
+
+<!-- TO ADD -->
