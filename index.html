@@ -6,9 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
+
+
             @font-face {
                 font-family: 'Christmas';
-                src: url(fonts/Christmas\ Comeback.ttf);
+                src: url(fonts/EksellDisplay-Large.ttf);
                 
             }
 
@@ -19,9 +21,9 @@
             }
 
             body {
-                font-family:'Times New Roman', Times, serif;
+                font-family: 'Times New Roman', Times, serif;
                 background-color: #f4f4f4;
-
+                
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -31,8 +33,8 @@
             }
 
             header {
-                background: rgb(6,116,89);
-                background: linear-gradient(90deg, rgba(6,116,89,1) 0%, rgba(46,168,9,1) 100%);
+                background: rgb(255,0,60);
+                background: linear-gradient(90deg, rgba(255,0,60,1) 0%, rgba(111,49,49,1) 100%);
                 color: #fff;
                 text-align: center;
                 padding: 10px;
@@ -41,22 +43,27 @@
                 font-stretch: expanded;
 
                 width: 100%;
+
+                font-family: 'Christmas';
             }
+
+        
 
             .recetas {
                 display: flex;
                 flex-direction: row;
 
+                
             }
 
             .recetas img {
-                width: 400px;
-                height: 400px;
+                width: 50vh;
+                height: 50vh;
                 margin: 50px 30px;
 
 
                 cursor: pointer;
-                border: #0C5F5F 5px solid;
+                border: 5px solid rgb(189, 0, 44);
                 border-radius: 15px;
             }
 
@@ -90,18 +97,19 @@
                 color: #f4f4f4;
                 font-size: 4rem;
                 backdrop-filter: blur(5px);
-                width: 85%;
+                width: 83.4%;
 
                 cursor: pointer;
+
+                
             }
 
             .recetas .scaled{
                 transform: scale(1.1);
             }
 
-            .intro, .receta_pudding {
+            .receta_pudding {
                 display: flex;
-                flex-direction: column;
                 flex-direction: column;
                 
                 align-items: center;
@@ -109,18 +117,23 @@
                 width: 90%;
 
                 background-color: #f3f2eb;
-                border: #0C5F5F 5px solid;
+                border: 5px solid rgb(189, 0, 44);
 
                 border-radius: 15px;
+
+                display: none;
             }
 
-            .intro, .receta_pudding h1 {
+
+            
+
+            .receta_pudding h1 {
                 font-size: 3rem;
                 text-align: center;
                 padding: 10px;
                 margin-top: 10px;
-                background: rgb(6,116,89);
-                background: linear-gradient(90deg, rgba(6,116,89,1) 0%, rgba(46,168,9,1) 100%);
+                background: rgb(255,0,60);
+                background: linear-gradient(90deg, rgba(255,0,60,1) 0%, rgba(111,49,49,1) 100%);
                 color: #fff;
 
                 width: 70%;
@@ -128,26 +141,181 @@
                 border-radius: 15px;
             }
 
-            .intro, .receta_pudding p {
+            .receta_pudding p {
                 font-size: 1.5rem;
                 padding: 10px;
+
+                
             }
 
             #ingredientes {
                 font-size: 1.9rem;
                 margin: 30px;
-
                 width: 40%;
-                background-color: red;   
-                
+                background-color: #f2e8cf; 
                 border-radius: 15px;
+            }
+
+            .receta_pudding .elaboracion {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+
+            .receta_pudding img {
+                width: 70vh;
+                height: 70vh;
+                border-radius: 15px;
+                margin: 30px;
+            }
+
+            .receta_pudding .steps {
+                font-size: 1.9rem;
+                margin: 30px;
+                width: 100%;
+                background-color: #f2e8cf; 
+                border-radius: 15px;
+                padding: 10px;
+            }
+
+            .receta_pudding h2 {
+                font-size: 2rem;
+                margin: 10px;
+            }
+
+            hr {
+                border: 1px solid #000;
+                margin: 10px;
+            }
+
+            .receta_gingerhouse h1 {
+                font-size: 3rem;
+                text-align: center;
+                padding: 10px;
+                margin-top: 10px;
+                background: rgb(255,0,60);
+                background: linear-gradient(90deg, rgba(255,0,60,1) 0%, rgba(111,49,49,1) 100%);
+                color: #fff;
+                width: 70%;
+                border-radius: 15px;
+            }
+
+            .receta_gingerhouse p {
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+
+            .receta_gingerhouse{
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+                background-color: #f3f2eb;
+                border: 5px solid rgb(189, 0, 44);
+                border-radius: 15px;
+            }
+
+            .receta_gingerhouse #ingredientes {
+                font-size: 1.9rem;
+                margin: 30px;
+                width: 40%;
+                background-color: #f2e8cf;
+                border-radius: 15px;
+            }
+
+            .receta_gingerhouse img {
+                width: 70vh;
+                height: 70vh;
+                border-radius: 15px;
+                margin: 30px;
+            }
+
+            .receta_gingerhouse .elaboracion {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .receta_gingerhouse .steps {
+                font-size: 1.9rem;
+                margin: 30px;
+                width: 100%;
+                background-color: #f2e8cf; 
+                border-radius: 15px;
+                padding: 10px;
+            }
+
+
+            .receta_cookies {
+                background-color: #f3f2eb;
+                border: 5px solid rgb(189, 0, 44);
+                border-radius: 15px;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+            }
+
+            .receta_cookies h1 {
+                font-size: 3rem;
+                text-align: center;
+                padding: 10px;
+                margin-top: 10px;
+                background: rgb(255,0,60);
+                background: linear-gradient(90deg, rgba(255,0,60,1) 0%, rgba(111,49,49,1) 100%);
+                color: #fff;
+                width: 70%;
+                border-radius: 15px;
+            }
+            
+            .receta_cookies p {
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+
+            .receta_cookies #ingredientes {
+                font-size: 1.9rem;
+                margin: 30px;
+                width: 40%;
+                background-color: #f2e8cf;
+                border-radius: 15px;
+            }
+
+            .receta_cookies img {
+                width: 70vh;
+                height: 70vh;
+                border-radius: 15px;
+                margin: 30px;
+            }
+
+            .receta_cookies .elaboracion {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .receta_cookies .steps {
+                font-size: 1.9rem;
+                margin: 30px;
+                width: 100%;
+                background-color: #f2e8cf;
+                border-radius: 15px;
+                padding: 10px;
             }
         </style>
     </head>
 
     <body>
         <header>
-            <h1>Christmas Recipes</h1>
+            <h1>Christmas Desserts</h1>
+            
+            <p>To cook that hapinness that we all need</p>
         </header>
 
         <div class="recetas">
@@ -164,27 +332,174 @@
             </div>
         </div>
 
-        <!--
-        <div class="intro">
-            <h1 id="nombre_receta">Christmas is coming !!!</h1>
-            <img>
-            <p>That's why I have created this little and simple website about three classic and delicious deserts that everyone can try to do. </p>
-            <p>Just click on the image of the dessert you want to know more about and enjoy the recipe.</p>
-            <p>Hope you like it and have a Merry Christmas !!!</p>
-        </div>
-        -->
-
         <div class="receta_pudding">
             <h1>Pudding</h1>
-            <p id="ingredientes">1. Ingrediente1
-            <br>2. Ingrediente2
-            <br>3. Ingrediente3
-            <br>4. Ingrediente4
-            <br>5. Ingrediente5
-            <br>6. Ingrediente6
-            <br>7. Ingrediente7
-            </p>
+            <div class="elaboracion">
+                <p id="ingredientes">
+                <strong>Ingredients:</strong>
+                <br>· 50g blanched almonds
+                <br>· 2 large Bramley cooking apples
+                <br>· 200g box candied peel
+                <br>· 1 whole nutmeg
+                <br>· 1kg raisins
+                <br>· 140g plain flour
+                <br>· 100g soft fresh white breadcrumbs
+                <br>· 100g light muscovado sugar
+                <br>· 3 large eggs
+                <br>· 2 tbsp brandy
+                <br>· 250g packet butter
+                <br><br><strong>- For the brandy and ginger butter:</strong>
+                <br>· 175g unsalted butter
+                <br>· grated zest of half an orange
+                <br>· 5 tbsp icing sugar
+                <br>· 4 tbsp brandy
+                <br>· 2 pieces of stem ginger
+                </p>
+                <img src="img/pudding.webp" alt="pudding">
+
+                <div class="steps">
+                    <h2>Step 1</h2>
+                        <p>Get everything for the pudding prepared. Chop the almonds coarsely. Peel, core and chop the cooking apples. Sharpen your knife and chop the candied peel. (You can chop the almonds and apples in a food processor, but the peel must be done by hand.) Grate three quarters of the nutmeg (sounds a lot but it's correct).</p>
+                        <hr>
+                        <h2>Step 2</h2>
+                        <p>Mix the almonds, apples, candied peel, nutmeg, raisins, flour, breadcrumbs, light muscovado sugar, eggs and 2 tbsp brandy or cognac in a large bowl.</p>
+                        <hr>
+                        <h2>Step 3</h2>
+                        <p>Holding the butter in its wrapper, grate a quarter of it into the bowl, then stir everything together. Repeat until all the butter is grated, then stir for 3-4 mins – the mixture is ready when it subsides slightly after each stir. Ask the family to stir too, and get everyone to make a wish.</p>
+                        <hr>
+                        <h2>Step 4</h2>
+                        <p>Generously butter two 1.2 litre bowls and put a circle of baking parchment in the bottom of each. Pack in the pudding mixture. Cover with a double layer of baking parchment, pleating it to allow for expansion, then tie with string (keep the paper in place with a rubber band while tying). Trim off any excess paper.</p>
+                        <hr>
+                        <h2>Step 5</h2>
+                        <p>Now stand each bowl on a large sheet of foil and bring the edges up over the top, then put another sheet of foil over the top and bring it down underneath to make a double package (this makes the puddings watertight). Tie with more string, and make a handle for easy lifting in and out of the pan. Watch our video to see how to tie up a pudding correctly.</p>
+                        <hr>
+                        <h2>Step 6</h2>
+                        <p>Boil or oven steam the puddings for 8 hrs, topping up with water as necessary. Remove from the pans and leave to cool overnight. When cold, discard the messy wrappings and re-wrap in new baking parchment, foil and string. Store in a cool, dry place until Christmas.</p>
+                        <hr>
+                        <h2>Step 7</h2>
+                        <p>To make the brandy butter, cream the butter with the orange zest and icing sugar. Gradually beat in the brandy or cognac and chopped stem ginger. Put in a small bowl, fork the top attractively and put in the fridge to set. The butter will keep for a week in the fridge, or it can be frozen for up to six weeks.</p>
+                        <hr>
+                        <h2>Step 8</h2>
+                        <p>On Christmas Day, boil or oven steam for 1 hr. Unwrap and turn out. To flame, warm 3-4 tbsp brandy in a small pan, pour it over the pudding and set light to it.</p>
+                    </div>
+            </div>    
         </div>
+            
+        <div class="receta_gingerhouse">
+                <h1>Gingerbread House</h1>
+                <div class="elaboracion">
+                    <p id="ingredientes">
+                        <strong>Ingredients:</strong>
+                        <br>· 250g unsalted butter
+
+                        <br>· 200g dark muscovado sugar
+
+                        <br>· 7 tbsp golden syrup
+
+                        <br>· 600g plain flour
+
+                        <br>· 2 tsp bicarbonate of soda
+
+                        <br>· 4 tsp ground ginger
+
+                        <br><br><strong>- To decorate:</strong>
+
+                        <br>· 200g flaked almonds
+
+                        <br>· 2 egg whites
+
+                        <br>· 500g icing sugar, plus extra to dust
+
+                        <br>· 125g mini chocolate fingers
+
+                        <br>· generous selection of sweets
+
+                        <br>· 1 mini chocolate roll
+
+                        <br>· few edible silver balls
+
+                    </p>
+                    <img src="img/gingerbreadhouse.webp" alt="pudding">
+
+                    
+                        <div class="steps">
+                            <h2>Step 1</h2>
+                            <p>Heat the oven to 200C/180C fan/gas 6. Melt the butter, sugar and syrup in a pan. Mix the flour, bicarbonate of soda and ground ginger into a large bowl, then stir in the butter mixture to make a stiff dough. If it won’t quite come together, add a tiny splash of water.</p>
+                            <hr>
+                            <h2>Step 2</h2>
+                            <p>Cut out the template (download from the tips below). Put a sheet of baking paper on a work surface and roll about one quarter of the dough to the thickness of two £1 coins. Cut out one of the sections, then slide the gingerbread, still on its baking paper, onto a baking sheet. Repeat with remaining dough, re-rolling the trimmings, until you have two side walls, a front and back wall and two roof panels. Any leftover dough can be cut into Christmas trees, if you like.</p>
+                            <hr>
+                            <h2>Step 3</h2>
+                            <p>Pick out the most intact flaked almonds and gently poke them into the roof sections, pointy-end first, to look like roof tiles. Bake all the sections for 12 mins or until firm and just a little darker at the edges. Leave to cool for a few minutes to firm up, then trim around the templates again to give clean, sharp edges. Leave to cool completely.</p>
+                            <hr>
+                            <h2>Step 4</h2>
+                            <p>Put the egg whites in a large bowl, sift in the icing sugar, then stir to make a thick, smooth icing. Spoon into a piping bag with a medium nozzle. Pipe generous snakes of icing along the wall edges, one by one, to join the walls together. Use a small bowl to support the walls from the inside, then allow to dry, ideally for a few hours.</p>
+                            <hr>
+                            <h2>Step 5</h2>
+                            <p>Once dry, remove the supports and fix the roof panels on. The angle is steep so you may need to hold these on firmly for a few mins until the icing starts to dry. Dry completely, ideally overnight. To decorate, pipe a little icing along the length of 20 mini chocolate fingers and stick these lengthways onto the side walls of the house. Use three, upright, for the door.</p>
+                            <hr>
+                            <h2>Step 6</h2>
+                            <p>Using the icing, stick sweets around the door and on the front of the house. To make the icicles, start with the nozzle at a 90-degree angle to the roof and squeeze out a pea-sized blob of icing. Keeping the pressure on, pull the nozzle down and then off – the icing will pull away, leaving a pointy trail. Repeat all around the front of the house. Cut the chocolate mini roll or dipped Flake on an angle, then fix with icing to make a chimney. Pipe a little icing around the top. If you’ve made gingerbread trees, decorate these now, too, topping each with a silver ball, if using. Dust the roof with icing sugar for a snowy effect. Lay a winding path of sweets, and fix gingerbread trees around and about using blobs of icing. Your gingerbread house will be edible for about a week.</p>
+                        </div>
+                </div>
+        </div>
+        <div class="receta_cookies">
+            <h1>Gingerbread House</h1>
+                <div class="elaboracion">
+                    <p id="ingredientes">
+                        <strong>Ingredients:</strong>
+                        <br>· 225g / 1 cup unsalted butter
+                        <br>· 1 cup caster/superfine sugar
+                        <br>· 1 1/2 tsp vanilla extract
+                        <br>· 1 large egg 
+                        <br>· 3 cups flour
+                        <br>· 3/4 tsp baking powder
+                        <br>· 3/4 tsp salt
+                    </p>
+                    <img src="img/christmascoockies.webp" alt="pudding">
+
+                    
+                        <div class="steps">
+                            <h2>Step 1</h2>
+                            <p>Preheat Oven to 180°C / 350°F (160°C fan). Line 2 baking sheets with parchment paper.</p>
+
+                            <hr>
+
+                            <h2>Step 2</h2>
+
+                            <p>Beat butter and sugar in a large bowl until creamy (1 minute on speed 5). Add egg and vanilla, beat until completely combined.</p>
+
+                            <hr>
+
+                            <h2>Step 3</h2>
+
+                            <p>Add flour, baking powder, and salt. Start mixing slowly, then beat until the flour is incorporated – it will be clumpy.</p>
+
+                            <hr>
+
+                            <h2>Step 4</h2>
+
+                            <p>Dust work surface with flour, scrape dough out of bowl. Pat together then cut in half, then shape into 2 discs.</p>
+
+                            <hr>
+
+                            <h2>Step 5</h2>
+
+                            <p>Roll out to 0.3cm / 1/8" (for thinner, crispier cookies) or 0.6cm / 1/4" (for thicker, softer cookies), sprinkling with flour under and over the dough so it doesn't stick.</p>
+
+                            <hr>
+
+                            <h2>Step 6</h2>
+
+                            <p>Use cookie cutters to press out shapes and use a knife or spatula to transfer shapes to prepared baking sheets. (Keep dough that doesn’t fit in the oven in the fridge).</p>
+
+                            <hr>
+                 
+                        </div> 
+                </div>
+        </div>
+        
+        
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -200,6 +515,39 @@
                         this.classList.add('scaled');
                     });
                 });
+
+                // Get the pudding recipe
+                const pudding = document.querySelector('.pudding');
+                const receta_pudding = document.querySelector('.receta_pudding');
+
+                pudding.addEventListener('click', function() {
+                    receta_gingerhouse.style.display = 'none';
+                    receta_cookies.style.display = 'none';
+                    receta_pudding.style.display = 'flex';
+                    receta_pudding.scrollIntoView({ behavior: 'smooth' });
+                });
+
+                // Get the gingerbread house recipe
+                const gingerbread = document.querySelector('.gingerbread');
+                const receta_gingerhouse = document.querySelector('.receta_gingerhouse');
+
+                gingerbread.addEventListener('click', function() {
+                    receta_pudding.style.display = 'none';
+                    receta_cookies.style.display = 'none';
+                    receta_gingerhouse.style.display = 'flex';
+                    receta_gingerhouse.scrollIntoView({ behavior: 'smooth' });
+                });
+
+                // Get the cookies recipe
+                const cookies = document.querySelector('.cookies');
+                const receta_cookies = document.querySelector('.receta_cookies');
+                cookies.addEventListener('click', function() {
+                    receta_pudding.style.display = 'none';
+                    receta_gingerhouse.style.display = 'none';
+                    receta_cookies.style.display = 'flex';
+                    receta_cookies.scrollIntoView({ behavior: 'smooth' });
+                });
+
             });
         </script>
     </body>
